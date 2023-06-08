@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 19</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>BREAD(Browse, Read, Edit, Delete)</h1>
+    <br />
+    <form class="form-group">
+      <h2>Filters</h2>
+      <div><label for="ID">ID</label> <input type="text" /></div>
+      <br />
+      <div><label for="ID">String</label> <input type="text" /></div>
+      <br />
+      <div><label for="ID">Integer</label> <input type="text" /></div>
+      <br />
+      <div><label for="ID">Float</label> <input type="text" /></div>
+      <br />
+      <div><label for="ID">Date</label> <input type="text" /></div>
+      <br />
+      <div><label for="Boolean">Boolean</label> <input type="boolean" /></div>
+      <br />
+      <div>
+        <input type="submit" />
+      </div>
+      <br />
+      <div>
+        <input type="reset" />
+      </div>
+    </form>
+    <br />
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>String</th>
+          <th>Integer</th>
+          <th>Float</th>
+          <th>Date</th>
+          <th>Boolean</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach((item, index) => { %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= item.string %></td>
+          <td><%= item.integer %></td>
+          <td><%= item.float %></td>
+          <td><%= item.date %></td>
+          <td><%= item.boolean %></td>
+          <td>
+            <a href="/edit/<%= index %>"
+              ><button class="edit" type="button">Edit</button></a
+            >
+            <span></span
+            ><a href="/delete/<%= index %>"
+              ><button class="delete" type="button">Delete</button></a
+            >
+          </td>
+        </tr>
+        <%})%>
+      </tbody>
+    </table>
+    <br />
+    <a href="/add"><button class="add" type="button">Add</button></a>
+    <!-- <div class="container">
+      <h2>BREAD(Browse, Read, Edit, Delete)</h2>
+      <ul class="responsive-table">
+        <li class="table-header">
+          <div class="col col-1">Id</div>
+          <div class="col col-2">String</div>
+          <div class="col col-3">Integer</div>
+          <div class="col col-4">Float</div>
+          <div class="col col-5">Date</div>
+          <div class="col col-6">Boolean</div>
+          <div class="col col-7">Action</div>
+        </li>
+        <li class="table-row">
+          <div class="col col-1" data-label="Job Id">42235</div>
+          <div class="col col-2" data-label="Customer Name">John Doe</div>
+          <div class="col col-3" data-label="Amount">$350</div>
+          <div class="col col-4" data-label="Payment Status">Pending</div>
+        </li>
+        <li class="table-row">
+          <div class="col col-1" data-label="Job Id">42442</div>
+          <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
+          <div class="col col-3" data-label="Amount">$220</div>
+          <div class="col col-4" data-label="Payment Status">Pending</div>
+        </li>
+        <li class="table-row">
+          <div class="col col-1" data-label="Job Id">42257</div>
+          <div class="col col-2" data-label="Customer Name">John Smith</div>
+          <div class="col col-3" data-label="Amount">$341</div>
+          <div class="col col-4" data-label="Payment Status">Pending</div>
+          <div class="col col-5" data-label="Customer Name">John Smith</div>
+          <div class="col col-6" data-label="Amount">$341</div>
+          <div class="col col-7" data-label="Payment Status">Pending</div>
+        </li>
+        <li class="table-row">
+          <div class="col col-1" data-label="Job Id">42311</div>
+          <div class="col col-2" data-label="Customer Name">John Carpenter</div>
+          <div class="col col-3" data-label="Amount">$115</div>
+          <div class="col col-4" data-label="Payment Status">Pending</div>
+        </li>
+      </ul>
+    </div> -->
+  </body>
+</html>

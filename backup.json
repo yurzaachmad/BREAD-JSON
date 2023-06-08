@@ -1,0 +1,30 @@
+[
+  {
+    "string": "coba",
+    "integer": 3,
+    "float": 5.4,
+    "Date": "2020-12-19",
+    "boolean": true
+  },
+  {
+    "string": "coba",
+    "integer": 5,
+    "float": 7.4,
+    "Date": "2020-12-20",
+    "boolean": false
+  },
+  {
+    "string": "coba",
+    "integer": 1,
+    "float": 8.4,
+    "Date": "2020-12-09",
+    "boolean": true
+  },
+  {
+    "string": "coba",
+    "integer": 9,
+    "float": 1.4,
+    "Date": "2020-12-24",
+    "boolean": false
+  }
+]

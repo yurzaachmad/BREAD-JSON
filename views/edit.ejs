@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <form class="form-group" action="" method="post">
+      <br />
+      <div>
+        <label for="string">String</label>
+        <input
+          type="text"
+          id="string"
+          name="string"
+          value="<%= data.string %>"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="integer">Integer</label>
+        <input
+          type="text"
+          id="integer"
+          name="integer"
+          value="<%= data.integer %>"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="float">Float</label>
+        <input type="text" id="float" name="float" value="<%= data.float %>" />
+      </div>
+      <br />
+      <div>
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" value="<%= data.date %>" />
+      </div>
+      <br />
+      <div>
+        <div class="row">
+          <div class="col-sm-2">
+            <label for="boolean" class="col-sm-2 col-form-label">Boolean</label>
+          </div>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              id="boolean"
+              name="boolean"
+              value="<%= data.boolean%>"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+      </div>
+      <br />
+      <div>
+        <button type="submit">Tambahkan</button>
+      </div>
+      <br />
+    </form>
+  </body>
+</html>
