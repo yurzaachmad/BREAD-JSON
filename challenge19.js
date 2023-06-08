@@ -40,14 +40,7 @@ app.get("/delete/:id", (req, res) => {
 });
 app.get("/edit/:id", (req, res) => {
   const id = req.params.id;
-  fs.readFile("data.json", "utf8", (err, data) => {
-    if (err) {
-      console.error(err);
-      return res.status(500).send("Terjadi kesalahan server");
-    }
-    res.render("edit", { data: file[id] });
-    console.log(data);
-  });
+  res.render("edit", { data: file[id] });
 });
 app.post("/edit/:id", (req, res) => {
   const id = req.params.id;
@@ -58,6 +51,7 @@ app.post("/edit/:id", (req, res) => {
     date: req.body.date,
     boolean: req.body.boolean,
   };
+  console.log(req.body);
   file.splice(id, 1, edit);
   fs.writeFileSync("data.json", JSON.stringify(file));
   res.redirect("/");
